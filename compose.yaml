@@ -1,0 +1,10 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=poker_db'
+      - 'MYSQL_PASSWORD=111111'
+      - 'MYSQL_ROOT_PASSWORD=000000'
+      - 'MYSQL_USER=user'
+    ports:
+      - '3306:3306'

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>巢湖人的比鸡</title>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/sandao.css">
+    <link rel="stylesheet" type="text/css" href="css/hall.css">
+    <link href="css/example.css" rel="stylesheet">
+
+</head>
+<body>
+<div style="height: 1200px">
+    <h1 style="font-size: 25px; text-align: center; color: white; "> 请详细阅读设置！ </h1>
+    <div class="input_div">
+        <label for="numOfPlayers" class="input_label">玩家总数：</label><input id="numOfPlayers" value="5" placeholder="数字" type="text" />
+    </div>
+    <div class="input_div">
+        <label for="roomPassport" class="input_label">房间密码：</label><input id="roomPassport"  placeholder="数字" type="text" />
+    </div>
+    <div class="input_div">
+        <label for="big_2nd" class="input_label">第二大输多少：</label><input id="big_2nd" value="10" placeholder="数字" type="text" />
+    </div>
+    <div class="input_div">
+        <label for="big_3rd" class="input_label">第三大输多少：</label><input id="big_3rd" value="20" placeholder="数字" type="text" />
+    </div>
+    <div class="input_div">
+        <label for="big_4th" class="input_label">第四大输多少：</label><input id="big_4th" value="30" placeholder="数字" type="text" />
+    </div>
+    <div class="input_div">
+        <label for="big_5th" class="input_label">第五大输多少：</label><input id="big_5th" value="40" placeholder="数字" type="text" />
+    </div>
+    <div class="input_div">
+        <label for="surrenderPoint" class="input_label">投降一家多少钱：</label><input id="surrenderPoint" value="40" placeholder="数字" type="text" />
+    </div>
+    <div class="input_div" style="margin-top: 10px">
+        <p class="input_label" style="font-size: 20px">喜牌设置：</p>
+    </div>
+    <div class="input_div">
+        <label class="input_label radio_label" >全黑(花色都是黑色)</label>
+        <input type="text" id="QUAN_HEI_VALUE" value="40" placeholder="一家多少分" />
+    </div>
+    <div class="input_div">
+        <label class="input_label radio_label" >全红(花色都是红色)</label>
+        <input type="text" id="QUAN_HONG_VALUE" value="40" placeholder="一家多少分" />
+    </div>
+    <div class="input_div">
+        <label class="input_label radio_label" >头道金花
+        </label>
+        <input type="text" id="TOUDAO_JINHUA_VALUE" value="40" placeholder="一家多少分" />
+    </div>
+    <div class="input_div">
+        <label class="input_label radio_label" >头道顺清
+        </label>
+        <input type="text" id="TOUDAO_SHUN_QING_VALUE" value="40" placeholder="一家多少分" />
+    </div>
+    <div class="input_div">
+        <label class="input_label radio_label" >头道三个头
+        </label>
+        <input type="text" id="TOUDAO_SANGETOU_VALUE" value="40" placeholder="一家多少分" />
+    </div>
+    <div class="input_div">
+        <label class="input_label radio_label" >二道顺清(与一道喜钱叠加)</label>
+        <input type="text" id="ERDAO_SHUN_QING_VALUE" value="40" placeholder="一家多少分" />
+    </div>
+    <div class="input_div">
+        <label class="input_label radio_label" >二道三个头(与一道喜钱叠加)</label>
+        <input type="text" id="ERDAO_SAN_GE_TOU_VALUE" value="40" placeholder="一家多少分" />
+    </div>
+    <div class="input_div">
+        <label class="input_label radio_label" >炸弹(9张牌仅有一个炸弹)</label>
+        <input type="text" id="ZHA_DAN_VALUE" value="40" placeholder="一家多少分" />
+    </div>
+    <div class="input_div">
+        <label class="input_label radio_label" >双炸弹(9张牌有两个炸弹)</label>
+        <input type="text" id="SHUANG_ZHA_DAN_VALUE" value="40" placeholder="一家多少分" />
+    </div>
+    <div class="input_div">
+        <label class="input_label radio_label" >三通(三道都是你最大)</label>
+        <input type="text" id="SAN_TONG_VALUE" value="40" placeholder="一家多少分" />
+    </div>
+
+
+    <div style='height: 50px;margin-left: 100px;'>
+        <button id="createRoom" class="pity">
+            开房
+        </button>
+    </div>
+
+
+    <div class="input_div" style="margin-top: 20px">
+        <label for="room_number" class="input_label">输入房间号：</label><input id="room_number" placeholder="输入房间号" type="text" />
+    </div>
+    <div class="input_div">
+        <label for="room_number" class="input_label">输入房间密码：</label><input id="room_passport" placeholder="输入房间密码" type="text" />
+    </div>
+
+
+
+    <div style='height: 50px;margin-left: 100px;'>
+        <button id="enterRoom" class="pity">
+            加入房间
+        </button>
+
+        <button id="history" class="pity" style="margin-left: 200px">
+            我的对战记录
+        </button>
+    </div>
+
+
+    <div class="table-back">
+        <button id="closeTable" style="position:fixed" class="pity">
+            关闭
+        </button>
+    </div>
+
+</div>
+<!--script src="dist/deck.js"></script>
+<script src="js/example.js"></script-->
+
+</body>
+</html>
+
+<script src="js/jquery.min.js"></script>
+<!--script src="js/test.js"></script-->
+<script>
+    var XY = {
+        history:[]
+    }
+    var str = "123"; // 要转换的字符串
+    var num = parseInt(str); // 调用parseInt()函数进行转换
+    console.log(num); // 输出结果为整数类型的值
+    var defaultRoomSetting = {
+        xiPaiPointMap: {
+            QUAN_HONGQUAN_HEI: 4,
+            QUAN_HONG: 4,
+            TOUDAO_JINHUA: 4,
+            TOUDAO_SHUN_QING: 6,
+            TOUDAO_SANGETOU: 8,
+            ERDAO_SHUN_QING: 4,
+            ERDAO_SAN_GE_TOU: 4,
+            ZHA_DAN: 4,
+            SHUANG_ZHA_DAN: 8,
+            SAN_TONG: 4,
+
+        },
+        surrenderNum: 1,
+        comparePoints: [
+            1,
+            2,
+            3,
+            4
+        ],
+        surrenderPoints: [
+            4
+        ],
+        xiPaiAddition: false
+    }
+
+    // 元素初始化
+
+
+    $("#createRoom").click(createRoom);
+    $("#enterRoom").click(joinRoom);
+    $("#history").click(history);
+    $("#closeTable").click(closeTable);
+
+
+    function closeTable(){
+        $(".table-back").hide();
+        $("#room_history").remove();
+    }
+
+    function historyRoomInfo() {
+        let roomId = $(this).attr('id')
+        let historyRounds = ajaxGet("/roundHistory?roomId=" + roomId)
+        doHistoryRoundsShow(historyRounds)
+    }
+
+    function createRoom() {
+        var setting = getFormSetting()
+        let jsonString = JSON.stringify(setting);
+        var obj = ajaxPost('/createRoom', jsonString);
+        if(!obj.isError){
+            window.location.href = '/page1.html';
+        }else{
+            alert(obj.errMsg);
+        }
+    }
+
+    function setXiPaiFormValue(setting, enumValue, field, fieldName) {
+        if (enumValue) {
+            var v = parseInt(enumValue)
+            if (!v) {
+                alert(fieldName + "输入不正确")
+            }else {
+                setting.xiPaiPointMap[field] = enumValue
+            }
+        }
+    }
+    function joinRoom() {
+//向服务器发送请求
+        var room_number = document.getElementById("room_number").value;
+        var room_passport = document.getElementById("room_passport").value;
+        var obj = ajaxGet('/enterRoom?roomId='+room_number+"&password="+room_passport);
+        if(!obj.isError){
+            window.location.href = '/page1.html';
+        }else{
+            alert(obj.errMsg);
+        }
+    }
+
+    function history(){
+        var obj = ajaxGet('roomHistory');
+        if(!obj.isError){
+            handleHistory(obj.data)
+        }
+    }
+
+    function handleHistory(data){
+        var str = '<table class="history-table" style="font-size: 12px" "" id="room_history">';
+        str += '<tr><th>房间号</th><th style="width: 90px">开始时间</th><th style="width: 90px">结束时间</th><th style="width: 200px">他人比分信息</th><th>我的比分</th><th>房间状态</th><!--th></th--></tr>'
+
+        for(var i=0;i<data.length;i++){
+            let roomInfo = data[i]
+            let roomId = roomInfo.roomId
+            let thisUserPointStr = 0
+            let startTime = roomInfo.startTime ? roomInfo.startTime : ""
+            let endTime = roomInfo.endTime ? roomInfo.endTime : ""
+            let status = roomInfo.status
+            let userPointsInfo = ""
+            if (roomInfo.pointsMap) {
+                let userNickMap = {}
+                if (roomInfo.allPlayers) {
+                    for (let player of roomInfo.allPlayers) {
+                        userNickMap[player.userId] = player.nikeName
+                    }
+                }
+                for (let userIdStr of Object.keys(roomInfo.pointsMap)) {
+                    let userId = parseInt(userIdStr)
+                    if (userId === roomInfo.thisUserId) {
+                        let thisUserPoint = roomInfo.pointsMap[userId]
+                        thisUserPoint = thisUserPoint ? thisUserPoint : 0
+                        thisUserPointStr = thisUserPoint > 0 ? ('+' + thisUserPoint) : thisUserPoint
+                        thisUserPointStr = tableView(thisUserPointStr, thisUserPoint)
+                    }
+                    let point = roomInfo.pointsMap[userId]
+                    point = point ? point : 0
+                    let pointStr = point > 0 ? ('+' + point) : point
+                    let nickName = userNickMap[userId]
+                    let userPointView = tableView(nickName + "(" + pointStr + ") ", point)
+                    userPointsInfo = userPointsInfo + userPointView
+                }
+            }
+            str += '<tr>'
+            str += '<td>' + roomId + '</td>'
+            str += '<td style="font-size: 10px">' + startTime + '</td>'
+            str += '<td style="font-size: 10px">' + endTime + '</td>'
+            str += '<td style="font-size: 8px">' + userPointsInfo + '</td>'
+            str += '<td>' + thisUserPointStr + '</td>'
+            str += '<td>' + status + '</td>'
+            // TODO 回合详细信息
+            // str += '<td><button class="roomInfoButton" id="' + roomId + '">房间详情</button></td>'
+            str += '</tr>'
+        }
+        str += '</table>'
+        $('.table-back').append($(str));
+        // $('.roomInfoButton').click(historyRoomInfo)
+        $(".table-back").show();
+    }
+
+    // TODO
+    function doHistoryRoundsShow(data) {
+        str += '<table class="history-table">'
+        str += '<tr><th>回合</th></tr>'
+    }
+
+    // str += '<table class="history-table" id="'+roomInfo.roomId+'"><tr><th>'+(lastMes[0]?lastMes[0].person_id:'')+'</th><th>'+(lastMes[1]?lastMes[1].person_id:'')+'</th><th>'+(lastMes[2]?lastMes[2].person_id:'')+'</th><th>'+(lastMes[3]?lastMes[3].person_id:'')+'</th><th>'+(lastMes[4]?lastMes[4].person_id:'')+'</th><th>时间</th></tr>';
+    // str += '<tr><td>'+tableView(lastMes[0])+'</td><td>'+tableView(lastMes[1])+'</td><td>'+tableView(lastMes[2])+'</td><td>'+tableView(lastMes[3])+'</td><td>'+tableView(lastMes[4])+'</td><td><span style="font-size:12px">'+(data[i].dateStr?data[i].dateStr:'0000-00-00 00:00:00')+'</span></td></tr>'
+    // str += '</table>';
+    function getFormSetting() {
+
+        // 组装
+        var numOfPlayers = document.getElementById("numOfPlayers").value;
+        var big_2nd = document.getElementById("big_2nd").value;
+        var big_3rd = document.getElementById("big_3rd").value;
+        var big_4th = document.getElementById("big_4th").value;
+        var big_5th = document.getElementById("big_5th").value;
+        var surrenderPoint = document.getElementById("surrenderPoint").value;
+        var roomPassport = document.getElementById("roomPassport").value;
+
+        var QUAN_HEI_VALUE = document.getElementById("QUAN_HEI_VALUE").value;
+        var QUAN_HONG_VALUE = document.getElementById("QUAN_HONG_VALUE").value
+        var TOUDAO_JINHUA_VALUE = document.getElementById("TOUDAO_JINHUA_VALUE").value
+        var TOUDAO_SHUN_QING_VALUE = document.getElementById("TOUDAO_SHUN_QING_VALUE").value
+        var TOUDAO_SANGETOU_VALUE = document.getElementById("TOUDAO_SANGETOU_VALUE").value
+        var ERDAO_SHUN_QING_VALUE = document.getElementById("ERDAO_SHUN_QING_VALUE").value
+        var ERDAO_SAN_GE_TOU_VALUE = document.getElementById("ERDAO_SAN_GE_TOU_VALUE").value
+        var ZHA_DAN_VALUE = document.getElementById("ZHA_DAN_VALUE").value
+        var SHUANG_ZHA_DAN_VALUE = document.getElementById("SHUANG_ZHA_DAN_VALUE").value
+        var SAN_TONG_VALUE = document.getElementById("SAN_TONG_VALUE").value
+
+        setting = {
+            roomPassport: roomPassport,
+            numOfPlayers: parseInt(numOfPlayers),
+            rule: {
+                xiPaiPointMap: {},
+                surrenderNum: 1,
+                comparePoints: [big_2nd, big_3rd, big_4th, big_5th],
+                surrenderPoint: [surrenderPoint],
+            },
+        }
+        setXiPaiFormValue(setting.rule, QUAN_HEI_VALUE, "QUAN_HEI", "全黑喜钱数值")
+        setXiPaiFormValue(setting.rule, QUAN_HONG_VALUE, "QUAN_HONG","全黑喜钱数值")
+        setXiPaiFormValue(setting.rule, TOUDAO_JINHUA_VALUE, "TOUDAO_JINHUA","全黑喜钱数值")
+        setXiPaiFormValue(setting.rule, TOUDAO_SHUN_QING_VALUE, "TOUDAO_SHUN_QING","全黑喜钱数值")
+        setXiPaiFormValue(setting.rule, TOUDAO_SANGETOU_VALUE, "TOUDAO_SANGETOU","全黑喜钱数值")
+        setXiPaiFormValue(setting.rule, ERDAO_SHUN_QING_VALUE, "ERDAO_SHUN_QING","全黑喜钱数值")
+        setXiPaiFormValue(setting.rule, ERDAO_SAN_GE_TOU_VALUE, "ERDAO_SAN_GE_TOU","全黑喜钱数值")
+        setXiPaiFormValue(setting.rule, ZHA_DAN_VALUE, "ZHA_DAN","全黑喜钱数值")
+        setXiPaiFormValue(setting.rule, SHUANG_ZHA_DAN_VALUE, "SHUANG_ZHA_DAN","全黑喜钱数值")
+        setXiPaiFormValue(setting.rule, SAN_TONG_VALUE, "SAN_TONG","全黑喜钱数值")
+        return setting
+    }
+
+    function tableView(str, point){
+        if(str){
+            return point>0?('<span style="color:red">'+ str +'</span>'): point===0?('<span>' + str + '</span>'):('<span style="color:green">' + str + '</span>');
+        }
+        return '';
+    }
+
+    function ajaxGet(url){
+        var data;
+        $.ajax({
+            url : url,
+            type : "get",
+            crossDomain:true,
+            async:false,
+            contentType: "application/json; charset=utf-8",
+            success : function(list){
+                data = list;
+            },
+            error:function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            }
+        });
+        return data;
+    }
+    function ajaxPost(url, body){
+        var data;
+        $.ajax({
+            url : url,
+            type : "post",
+            crossDomain:false,
+            data: body,
+            async:false,
+            contentType: "application/json; charset=utf-8",
+            success : function(list){
+                data = list;
+            },
+            error:function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            }
+        });
+        return data;
+    }
+
+
+</script>
