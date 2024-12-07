@@ -5,10 +5,12 @@
 <configuration>
     <typeAliases>
         <package name="com.game.pokers.dao"/>
+        <package name="com.oe.dao"/>
     </typeAliases>
     <mappers>
         <mapper resource="com/game/pokers/dao/User.xml"/>
         <mapper resource="com/game/pokers/dao/BiJiRoomInfo.xml"/>
         <mapper resource="com/game/pokers/dao/BiJiRoundInfo.xml"/>
+        <mapper resource="com/oe/dao/OkxKlinesData.xml"/>
     </mappers>
 </configuration>

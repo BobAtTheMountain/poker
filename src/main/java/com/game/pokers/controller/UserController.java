@@ -6,7 +6,7 @@ import com.game.pokers.dto.UserInfoDTO;
 import com.game.pokers.entity.UserInfo;
 import com.game.pokers.global.Global;
 import com.game.pokers.service.UserServiceI;
-import com.game.pokers.utils.Utils;
+import com.game.pokers.utils.BijiUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -25,7 +25,7 @@ public class UserController {
     public ResDTO<Long> doRegister(
             HttpServletRequest request, ModelMap model, @RequestParam String phone, @RequestParam String password,
             @RequestParam String name) {
-        if(!Utils.isPhoneLegal(phone)) {
+        if(!BijiUtils.isPhoneLegal(phone)) {
             return ResDTO.getErrResDTO(ErrorCode.PARAM_ERROR, "手机错误号格式错误！");
         }
         if (userService.getUserByPhone(phone) != null) {
@@ -46,7 +46,7 @@ public class UserController {
     @RequestMapping(value = "/doLogin", method = RequestMethod.GET, produces="application/json;charset=UTF-8")
     public ResDTO<UserInfoDTO> doLogin(
             HttpServletRequest request, @RequestParam String phone, @RequestParam String password){
-        if(!Utils.isPhoneLegal(phone)) {
+        if(!BijiUtils.isPhoneLegal(phone)) {
             return ResDTO.getErrResDTO(ErrorCode.PARAM_ERROR, "手机错误号格式错误！");
         }
         UserInfo userInfo = userService.getUserByPhone(phone);

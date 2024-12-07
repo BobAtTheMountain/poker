@@ -1,7 +1,6 @@
-package com.game.pokers;
+package com;
 
 import org.mybatis.spring.SqlSessionFactoryBean;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -14,7 +13,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableJdbcRepositories
 @Import(MyBatisJdbcConfiguration.class)
-class Application {
+public class MyBatisConfig {
 
     @Bean
     DataSource dataSource() {

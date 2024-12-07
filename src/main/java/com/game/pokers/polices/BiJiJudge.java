@@ -5,14 +5,10 @@ import com.game.pokers.constant.PokerIndex;
 import com.game.pokers.constant.biji.BijiRoundStatus;
 import com.game.pokers.constant.biji.BijiXipai;
 import com.game.pokers.constant.zhajinhua.ZhajinHuaType;
-import com.game.pokers.dto.BiJiRoomInfoDTO;
-import com.game.pokers.entity.UserInfo;
 import com.game.pokers.entity.biji.BijiRoomInfo;
 import com.game.pokers.entity.biji.BijiRoundInfo;
 import com.game.pokers.entity.biji.BijiRuleConfig;
 import com.game.pokers.entity.zhajinhua.UserZhaJinHuaPoker;
-import com.game.pokers.mapper.BiJiMapper;
-import com.game.pokers.utils.Utils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

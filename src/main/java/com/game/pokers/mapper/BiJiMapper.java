@@ -9,7 +9,7 @@ import com.game.pokers.dto.UserInfoDTO;
 import com.game.pokers.entity.UserInfo;
 import com.game.pokers.entity.biji.BijiRoomInfo;
 import com.game.pokers.entity.biji.BijiRoundInfo;
-import com.game.pokers.utils.Utils;
+import com.game.pokers.utils.BijiUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -64,10 +64,10 @@ public class BiJiMapper {
             return null;
         }
         BiJiRoomInfoDTO r = new BiJiRoomInfoDTO();
-        r.setEndTime(Utils.toYYYYMMDDHHmmss(o.getEndTime()));
+        r.setEndTime(BijiUtils.toYYYYMMDDHHmmss(o.getEndTime()));
         r.setAllPlayers(o.getAllPlayers().stream().map(BiJiMapper::toDTO).toList());
         r.setRoomId(o.getRoomId());
-        r.setStartTime(Utils.toYYYYMMDDHHmmss(o.getStartTime()));
+        r.setStartTime(BijiUtils.toYYYYMMDDHHmmss(o.getStartTime()));
         r.setStatus(o.getBijiRoomStatus());
         r.setMainUser(toDTO(o.getRoomMainUser()));
         r.setRoomPassport(o.getRoomPassport());
@@ -90,8 +90,8 @@ public class BiJiMapper {
         BiJiRoundInfoDTO r = new BiJiRoundInfoDTO();
         r.setRoundId(o.getRoundId());
         r.setRoomId(o.getRoomId());
-        r.setStartTime(Utils.toYYYYMMDDHHmmss(o.getStartTime()));
-        r.setEndTime(Utils.toYYYYMMDDHHmmss(o.getEndTime()));
+        r.setStartTime(BijiUtils.toYYYYMMDDHHmmss(o.getStartTime()));
+        r.setEndTime(BijiUtils.toYYYYMMDDHHmmss(o.getEndTime()));
         r.setPokers(o.getPokers());
         r.setInitPokers9(o.getInitPokers9());
         r.setUserPlayMap(o.getUserPlayMap());

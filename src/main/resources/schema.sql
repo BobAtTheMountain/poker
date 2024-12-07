@@ -44,3 +44,18 @@ CREATE TABLE IF NOT EXISTS biji_user_room_ref (
       KEY `idx_user_id` (`user_id`),
       KEY `idx_room_id` (`room_id`)
 );
+
+
+CREATE TABLE IF NOT EXISTS okx_klines_data (
+      id      bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '唯一主键',
+      inst_id varchar(60) NOT NULL COMMENT 'inst_id',
+      bar varchar(20) NOT NULL COMMENT 'bar',
+      timestamp_milli  bigint NOT NULL COMMENT 'timestamp_milli',
+      open_price double NOT NULL COMMENT 'open_price',
+      high_price  double NOT NULL COMMENT 'high_price',
+      low_price double NOT NULL COMMENT 'low_price',
+      close_price  double NOT NULL COMMENT 'close_price',
+      confirm bigint NOT NULL COMMENT 'confirm',
+      PRIMARY KEY (`id`),
+      UNIQUE KEY `inst_id_bar_timestamp_milli` (`inst_id`, `bar`, `timestamp_milli`)
+);

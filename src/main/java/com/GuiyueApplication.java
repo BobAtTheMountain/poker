@@ -1,18 +1,19 @@
-package com.game.pokers;
+package com;
 
+import com.common.utils.HttpClientUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 
-@SpringBootApplication(
-        exclude = {DataSourceAutoConfiguration.class}
-)
-public class PokersApplication {
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class GuiyueApplication {
 
     public static void main(String[] args) {
         System.out.println("aaa");
-        SpringApplication.run(PokersApplication.class, args);
+        // oe初始化
+        HttpClientUtils.init();
+        SpringApplication.run(GuiyueApplication.class, args);
     }
 
 }

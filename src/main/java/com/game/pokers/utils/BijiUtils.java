@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
-public class Utils {
+public class BijiUtils {
     /**
      * 大陆号码或香港号码均可
      */
