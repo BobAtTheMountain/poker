@@ -71,7 +71,7 @@ public class OePolicy {
         }else if (laskRate < -0.06) {
             num += lastMinus6Per;
             desc += "当天跌超过6%,多买" + lastMinus6Per + "份;";
-        } else if (laskRate < 0.03) {
+        } else if (laskRate < -0.03) {
             num += lastMinus3Per;
             desc += "当天跌超过3%,多买" + lastMinus3Per + "份;";
         }
@@ -111,7 +111,7 @@ public class OePolicy {
         result.setNum(num);
         result.setInstId(data.getFirst().getInstId());
         if (data.getFirst().getConfirm()) {
-            result.setDate(DateUtils.formatByTimeStamp(data.getFirst().getTimestampMilli() + 24 * 2600 * 1000));
+            result.setDate(DateUtils.formatByTimeStamp(data.getFirst().getTimestampMilli() + (24 * 3600 * 1000 - 1000)));
         }else {
             result.setDate(DateUtils.formatByTimeStamp(System.currentTimeMillis()));
         }

@@ -52,7 +52,7 @@ public class OE {
     }
 
     @RequestMapping("/get_recommend")
-    public String getKlines(HttpServletRequest request) {
+    public String getRecommend(HttpServletRequest request) {
         StringBuilder policyDesc = new StringBuilder();
         for (String instId : OeConstant.SupportedInstIds) {
             List<OkxKlinesDataDO> doList = okxKlinesDataRepo.getKLines(instId, "1D", 100);
