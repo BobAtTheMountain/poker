@@ -19,7 +19,7 @@ import java.util.List;
 public class OkxApi {
 
     public static List<Kline> getKeyLines(GetKeyLineParam param) throws IOException {
-        String result = HttpClientUtils.Get(OeConstant.OKX_DOMAIN, OeConstant.OKX_API_INDEX_CANDLES, param.getParams(), null);
+        String result = HttpClientUtils.Get(OeConstant.OKX_DOMAIN_CN, OeConstant.OKX_API_INDEX_CANDLES, param.getParams(), null);
         if (result == null) {
             return new ArrayList<>();
         }
