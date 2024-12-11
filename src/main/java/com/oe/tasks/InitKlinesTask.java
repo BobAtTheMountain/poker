@@ -1,5 +1,6 @@
 package com.oe.tasks;
 
+import com.oe.contant.OeConstant;
 import com.oe.dao.OkxKlinesDataRepo;
 import com.oe.objects.db.OkxKlinesDataDO;
 import com.oe.objects.models.Kline;
@@ -22,12 +23,7 @@ public class InitKlinesTask {
 
     public Runnable getInitKlinesTask() {
         return () -> {
-            List<String> instIds = new ArrayList<>();
-            instIds.add("BTC-USDT");
-            instIds.add("ETH-USDT");
-            instIds.add("SOL-USDT");
-
-            for (String instId : instIds) {
+            for (String instId : OeConstant.SupportedInstIds) {
                 GetKeyLineParam param = new GetKeyLineParam();
                 param.setInstId(instId);
                 param.setBar("1D");
@@ -69,11 +65,7 @@ public class InitKlinesTask {
     public Runnable getNewKlinesTask() {
         return () -> {
             while (true) {
-                List<String> instIds = new ArrayList<>();
-                instIds.add("BTC-USDT");
-                instIds.add("ETH-USDT");
-                instIds.add("SOL-USDT");
-                for (String instId : instIds) {
+                for (String instId : OeConstant.SupportedInstIds) {
                     GetKeyLineParam param = new GetKeyLineParam();
                     param.setInstId(instId);
                     param.setBar("1D");

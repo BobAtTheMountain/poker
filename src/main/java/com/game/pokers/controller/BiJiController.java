@@ -11,6 +11,7 @@ import com.game.pokers.mapper.BiJiMapper;
 import com.game.pokers.polices.BiJiJudge;
 import com.game.pokers.service.BijiServiceI;
 import com.game.pokers.service.UserServiceI;
+import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,10 +24,10 @@ import static com.game.pokers.polices.BiJiJudge.settlement;
 @RestController
 public class BiJiController {
 
-    @Autowired
+    @Resource
     BijiServiceI bijiService;
 
-    @Autowired
+    @Resource
     UserServiceI userService;
 
 

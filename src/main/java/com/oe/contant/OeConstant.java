@@ -1,6 +1,8 @@
 package com.oe.contant;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class OeConstant {
@@ -8,6 +10,20 @@ public class OeConstant {
     public static String OKX_DOMAIN = "https://www.okx.com";
     public static String OKX_DOMAIN_CN = "https://www.cnouyi.group";
     public static String OKX_API_INDEX_CANDLES = "/api/v5/market/index-candles";
+
+
+    public static String BTC_USDT = "BTC-USDT";
+    public static String ETH_USDT = "ETH-USDT";
+    public static String SOL_USDT = "SOL-USDT";
+
+    public static List<String> SupportedInstIds = new ArrayList<String>();
+
+    static {
+        SupportedInstIds.add(BTC_USDT);
+        SupportedInstIds.add(ETH_USDT);
+        SupportedInstIds.add(SOL_USDT);
+    }
+
 
     public static Map<String, Boolean> KLineBarMap = new HashMap<>();
 

@@ -3,6 +3,9 @@ package com.oe.objects.db;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Table("okx_klines_data")
 public class OkxKlinesDataDO {
     @Id
@@ -23,6 +26,17 @@ public class OkxKlinesDataDO {
     private String bar;
     // instId
     private String instId;
+
+    public List<String> ToApiList() {
+        List<String> list = new ArrayList<String>();
+        list.add(timestampMilli.toString());
+        list.add(openPrice.toString());
+        list.add(highPrice.toString());
+        list.add(lowPrice.toString());
+        list.add(closePrice.toString());
+        list.add(confirm.toString());
+        return list;
+    }
 
     public Long getId() {
         return id;
