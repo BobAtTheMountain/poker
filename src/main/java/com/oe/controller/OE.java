@@ -58,11 +58,11 @@ public class OE {
             List<OkxKlinesDataDO> doList = okxKlinesDataRepo.getKLines(instId, "1D", 100);
 
             DayPolicyResult resultNowK = OePolicy.getPolicyV1(doList);
-            policyDesc.append(resultNowK.toPageDesc()).append("\r\n");
+            policyDesc.append(resultNowK.toPageDesc()).append("<br />");
             if (doList != null && doList.size() > 1) {
                 doList.removeFirst();
                 DayPolicyResult resultLastK = OePolicy.getPolicyV1(doList);
-                policyDesc.append(resultLastK.toPageDesc()).append("\r\n");
+                policyDesc.append(resultLastK.toPageDesc()).append("<br />");
             }
         }
         return policyDesc.toString();
