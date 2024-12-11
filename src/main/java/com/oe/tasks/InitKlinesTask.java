@@ -69,7 +69,7 @@ public class InitKlinesTask {
                     GetKeyLineParam param = new GetKeyLineParam();
                     param.setInstId(instId);
                     param.setBar("1D");
-                    param.setLimit(10);
+                    param.setLimit(30);
                     try {
                         List<Kline> results = OkxApi.getKeyLines(param);
                         if (CollectionUtils.isEmpty(results)) {

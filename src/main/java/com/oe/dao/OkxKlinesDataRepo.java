@@ -10,7 +10,7 @@ import java.util.List;
 public interface OkxKlinesDataRepo extends CrudRepository<OkxKlinesDataDO, Long> {
 
     @Modifying
-    @Query("insert into okx_klines_data(timestamp_milli, open_price, high_price, low_price,close_price, confirm, bar, inst_id)values(:timestampMilli, :openPrice,:highPrice, :lowPrice, :closePrice,:confirm, :bar, :instId) ON DUPLICATE KEY UPDATE confirm= :confirm")
+    @Query("insert into okx_klines_data(timestamp_milli, open_price, high_price, low_price,close_price, confirm, bar, inst_id)values(:timestampMilli, :openPrice,:highPrice, :lowPrice, :closePrice,:confirm, :bar, :instId) ON DUPLICATE KEY UPDATE confirm=:confirm, open_price=:openPrice, high_price=:highPrice, low_price=:lowPrice, close_price=:closePrice")
     void insertOnDuplicate(Long timestampMilli, Double openPrice, Double highPrice,
                          Double lowPrice, Double closePrice, String bar, String instId, Boolean confirm);
 
